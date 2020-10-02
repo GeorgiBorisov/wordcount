@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Count</title>
+</head>
+<body>
+    <h1>COUNT PAGE</h1>
+    <h2>There are {{word_num}} words in the text</h2>
+    <h2>YOUR TEXT</h2>
+    <h3>{{text}}</h3>
+    <p><a href="{% url 'home' %}">START AGAIN</a></p>
+    {% for w,c in words %}
+        <strong>{{w}}</strong>
+        <br/>
+        {{c}}
+        <br/>
+    {% endfor %}
+</body>
+</html>
